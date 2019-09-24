@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            color: red;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            text-align: center;
+            line-height: 100px;
+            transition: width 1s;
+        }
+        /* .wrapper:hover{ 
+            width: 300px;
+        } */
+        .active{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" id="wrapper">谢妍</div>
+    <script>
+        var test = document.getElementById('wrapper')
+        //console.log(test)
+        var isactive = false
+        test.addEventListener('click',function(){
+            // test.style.width = '300px'
+            isactive = !isactive
+            if (isactive == true) {
+            test.classList.add('active')
+            }else{
+                test.classList.remove('active')
+            }
+        })//监听点击事件
+    </script>
+</body>
+</html>
