@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>map</title>
+</head>
+<body>
+    <script>
+    var map = new Map()
+    map.set('a',() => {
+        console.log('a');
+    })
+    console.log(map.get('a')())
+    for(let key of map.keys()){
+        console.log('key',key)
+    }
+    for(let value of map.values()){
+        console.log('key',value)
+    }
+    for(let item of map.entries()){
+        console.log('key',item)
+    }
+    map.delete('a')
+    console.log(map.has('a'),map.size)
+    </script>
+</body>
+</html>
