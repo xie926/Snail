@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+      .paras{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+      /* 淡入 */
+      .para{
+        /* margin-top: 20px; */
+        /* animation: danru 1s linear forwards; */
+        animation: shangyi 1s linear forwards;
+      }
+      @keyframes shangyi{
+          0%{
+              filter: blur(10px);
+              opacity: 0;
+              /* margin-top: 0px; */
+              top: 20px;
+          }
+          100%{
+              filter: blur(0);
+              opacity: 1;
+              top: 10px;
+          }
+      }
+  </style>
+</head>
+<body>
+  <!-- 1： 从下往上 
+  2： 淡入
+  -->
+    <div class="paras">
+      <p class="para">这一年</p>
+      <p class="para">TA有46小时与音乐相伴</p>
+      <p class="para">在音乐的世界</p>
+      <p class="para">遇见你真好</p>
+    </div>
+</body>
+<ml>
