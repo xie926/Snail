@@ -1,0 +1,8 @@
+<!--miniprogram/pages/common/index.wxml-->
+<template name="head">
+  <view class="page-head">
+    <view class="page-head-title">{{title}}</view>
+    <view class="page-head-line"></view>
+    <view class="page-head-desc" wx:if="{{desc}}">{{desc}}</view>
+  </view>
+</template>
