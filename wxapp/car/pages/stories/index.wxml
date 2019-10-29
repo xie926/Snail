@@ -1,0 +1,7 @@
+<!--pages/stories/index.wxml-->
+<view>
+  <view class="card" wx:for="{{stories}}" wx:key="id">
+    <video src="{{item.video}}" poster="{{item.image}}" hidden="{{currentVid !== item.id}}"></video>
+    <image src="{{item.image}}" bindtap="play" data-id="{{item.id}}" hidden="{{currentVid == item.id}}"></image>
+  </view>
+</view>
