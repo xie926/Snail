@@ -27,9 +27,20 @@
         // proxy.age = 25
         // console.log(proxy.age)
 
-        let targetEpt = {}
-        let proxyEpt = new Proxy(targetEpt, handler)
-        console.log(Proxy.name)
+        let target = {}
+        let handler = {
+            get(target,key){
+                console.log('getting:'+key)
+                return target[key]
+            },
+            set(target,key,value){
+                console.log('setting:'+key)
+                target[key] = value
+            }
+        }
+        let proxyEpt = new Proxy(target,handler)
+        proxyEpt.name = 'xieyan'
+        console.log(proxyEpt.name)
     </script>
 </body>
 </html>
